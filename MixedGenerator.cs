@@ -8,7 +8,7 @@ namespace RandomicGenerator
 {
     class MixedGenerator : IRandomGenerator
     {
-        IRandomGenerator[] generators = { new IntGenerator(), new FirstNameGenerator(), new LastNameGenerator(), new FullNameGenerator() };
+        IRandomGenerator[] generators = { new IntGenerator(), new FirstNameGenerator(), new LastNameGenerator(), new FullNameGenerator(), new DateGenerator() };
         private Random r = new Random();
 
         public string Name => "Mixed (in progress)";
