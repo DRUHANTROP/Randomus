@@ -11,6 +11,9 @@ namespace RandomicGenerator
         string fullName;
         FirstNameGenerator fng = new FirstNameGenerator();
         LastNameGenerator lng = new LastNameGenerator();
+
+        string IRandomGenerator.Name => "Full Name";
+
         public object Next()
         {
             fullName = fng.Next() + " " + lng.Next();

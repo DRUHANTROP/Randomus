@@ -8,6 +8,8 @@ namespace RandomicGenerator
 {
     interface IRandomGenerator
     {
+        string Name { get;}
+
         ///<summary>
         ///Возвращает следующую случайную величину.
         /// </summary>

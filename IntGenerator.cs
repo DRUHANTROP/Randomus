@@ -9,6 +9,8 @@ namespace RandomicGenerator
     class IntGenerator:IRandomGenerator
     {
         private Random rnd = new Random(DateTime.Now.Millisecond);
+
+        public string Name =>"ID";
         public object Next()
         {
             return rnd.Next();

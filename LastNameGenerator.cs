@@ -8,13 +8,16 @@ namespace RandomicGenerator
 {
     class LastNameGenerator : IRandomGenerator
     {
-        private Random r = new Random();
-        private string[] syllable = { "ma", "lee", "cru", "ste", "ve", "la", "le", "si", "va", "mo", "mi", "lo" };
+        private Random r = new Random(DateTime.Now.Millisecond-2000);
+        private string[] syllable = { "ma", "lee", "cru", "ste", "ve", "la", "le", "si", "va", "mo", "mi", "lo","su","sa","no","ge","tri","co" };
         private string lastName;
+
+        public string Name =>"Last Name";
+
         public object Next()
         {
             lastName = "";
-            for (int i = 0; i < r.Next(4)+1; i++)
+            for (int i = 0; i < r.Next(5)+2; i++)
             {
                 lastName += syllable[r.Next(syllable.Length)];
             }

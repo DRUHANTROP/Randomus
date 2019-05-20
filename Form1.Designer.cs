@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.resultLB = new System.Windows.Forms.ListBox();
+            this.mixedGeneratorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.genCB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.countUD = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.generateB = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.mixedGeneratorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countUD)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,6 +48,10 @@
             this.resultLB.Name = "resultLB";
             this.resultLB.Size = new System.Drawing.Size(277, 420);
             this.resultLB.TabIndex = 0;
+            // 
+            // mixedGeneratorBindingSource
+            // 
+            this.mixedGeneratorBindingSource.DataSource = typeof(RandomicGenerator.MixedGenerator);
             // 
             // genCB
             // 
@@ -103,6 +110,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Randomus Degenerator";
+            ((System.ComponentModel.ISupportInitialize)(this.mixedGeneratorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,6 +125,7 @@
         private System.Windows.Forms.NumericUpDown countUD;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button generateB;
+        private System.Windows.Forms.BindingSource mixedGeneratorBindingSource;
     }
 }
 
