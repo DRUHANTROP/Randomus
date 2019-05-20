@@ -20,6 +20,7 @@ namespace RandomicGenerator
             generators.Add(new FirstNameGenerator());
             generators.Add(new LastNameGenerator());
             generators.Add(new FullNameGenerator());
+            generators.Add(new DateGenerator());
             generators.Add(new MixedGenerator());
             foreach (var item in generators)
             {
