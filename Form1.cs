@@ -34,7 +34,9 @@ namespace RandomicGenerator
         {
             resultLB.Items.Clear();
             IRandomGenerator random = new IntGenerator();
-            random = (from i in generators where i.Name == genCB.SelectedItem.ToString() select i).First();
+            int num = genCB.SelectedIndex;
+            if (num >= 0 && num <= generators.Count)
+                random = generators[num];
             for (int i = 0; i < countUD.Value; i++)
             {
                 resultLB.Items.Add(random.Next());
